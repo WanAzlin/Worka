@@ -29,6 +29,14 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="home" size={30} color={color} />,
+          
+        }}
+      />
+      <Tabs.Screen
+        name="two"
+        options={{
+          title: '',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="toy-brick-search" size={30} color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -46,17 +54,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
-        options={{
-          title: '',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="toy-brick-search" size={30} color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="report"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <AntDesign name="dingding-o" size={30} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="dingding-o" size={35} color="#8A74FC" />,
         }}
       />
       <Tabs.Screen
