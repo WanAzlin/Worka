@@ -1,8 +1,10 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
-
+import { AntDesign } from '@expo/vector-icons';
 import Colors from '../../constants/Colors';
+import { Fontisto } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -25,8 +27,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: '',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="home" size={30} color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -46,8 +48,29 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: '',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="toy-brick-search" size={30} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="report"
+        options={{
+          title: '',
+          tabBarIcon: ({ color }) => <AntDesign name="dingding-o" size={30} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="trend"
+        options={{
+          title: '',
+          tabBarIcon: ({ color }) => <FontAwesome name="qq" size={30} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="account"
+        options={{
+          title: '',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="account-reactivate" size={30} color={color}  />
         }}
       />
     </Tabs>
