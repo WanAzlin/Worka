@@ -37,16 +37,12 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="toy-brick-search" size={30} color={color} />,
+          headerTitle: "Programs",
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
                 {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
+                  <MaterialCommunityIcons name="bookmark-minus-outline" size={30} color="black" />
                 )}
               </Pressable>
             </Link>
@@ -64,14 +60,39 @@ export default function TabLayout() {
         name="trend"
         options={{
           title: '',
+          
           tabBarIcon: ({ color }) => <FontAwesome name="qq" size={30} color={color} />,
+          headerTitle: "Trending",
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <MaterialCommunityIcons name="bookmark-minus-outline" size={30} color="black" />
+                )}
+              </Pressable>
+            </Link>
+          ),
         }}
       />
       <Tabs.Screen
         name="account"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="account-reactivate" size={30} color={color}  />
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="account-reactivate" size={30} color={color}  />,
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={25}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
         }}
       />
     </Tabs>
