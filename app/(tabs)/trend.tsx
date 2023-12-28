@@ -11,7 +11,7 @@ export default function TabTwoScreen() {
           <Text style={styles.title}>ALL</Text>
         </View>
         <View style={styles.box4}>
-          <Text style={styles.title1}>Popular</Text>
+          <Text style={styles.title11}>Popular</Text>
         </View>
         <View style={styles.box4}>
           <Text style={styles.title2}>My Playlist</Text>
@@ -22,7 +22,7 @@ export default function TabTwoScreen() {
           <Text style={styles.title1}>Collection</Text>
         </View>
         <View style={styles.box4}>
-          <Text style={styles.title3}>Recent</Text>
+          <Text style={styles.title11}>Recent</Text>
         </View>
         <View style={styles.box5}>
           <Text style={styles.title3}>Other</Text>
@@ -44,7 +44,7 @@ export default function TabTwoScreen() {
           <Text style={styles.tit5}>The passage is attributed to The    </Text>
         </View>
           <Image style={styles.iC5}
-           source={require("../../assets/images/img4.png")} />
+           source={require("../../assets/images/img4.jpg")} />
         </View>
         <View style ={{flexDirection: "row"}}> 
         <View style={styles.box1}> 
@@ -55,7 +55,7 @@ export default function TabTwoScreen() {
           <Text style={styles.tit5}>The passage is attributed to The    </Text>
         </View>
           <Image style={styles.iC6}
-           source={require("../../assets/images/img5.png")} />
+           source={require("../../assets/images/img7.jpg")} />
         </View>
       </View>
     
@@ -82,6 +82,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: "#9DA5AC",
     marginLeft: 10,
+  },
+  title11: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: "#9DA5AC",
+    marginLeft: 25,
   },
   title2: {
     fontSize: 15,
@@ -178,15 +184,16 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginLeft: 18,
     marginTop: 13,
+    
   },
   tit4: {
-    
+    color: "#9DA5AC",
     fontSize: 12,
     marginLeft: 18,
     marginTop: 13,
   },
   tit5: {
-    
+    color: "#9DA5AC",
     fontSize: 12,
     marginLeft: 18,
     marginTop: 1,

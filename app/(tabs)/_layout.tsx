@@ -5,7 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 import Colors from '../../constants/Colors';
 import { Fontisto } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import { Ionicons } from '@expo/vector-icons';
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
@@ -54,6 +54,16 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color }) => <AntDesign name="dingding-o" size={35} color="#8A74FC" />,
+          headerTitle: "Daily Report",
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <Ionicons name="md-ellipsis-vertical" size={24} color="black" />
+                )}
+              </Pressable>
+            </Link>
+          ),
         }}
       />
       <Tabs.Screen
